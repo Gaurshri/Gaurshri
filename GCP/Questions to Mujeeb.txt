@@ -1,0 +1,3 @@
+East/West Traffic
+vLAN - is it a subnet ?
+How to make DMZ in AWS.
