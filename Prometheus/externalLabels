@@ -1,0 +1,8 @@
+Adding ExternalLabels to Prometheus
+
+I have multiple Kubernetes clusters and each having its own Prometheus installed for monitoring and alerting purpose. However, they all are forwarding alerts to a common Netcool server. When alert is reported by Netcool server it is not possible to know which Cluster has generated the alert. In order to solve this, we need to configure ExternalLabels in Prometheus.
+
+# kubectl edit Prometheus -n <namespace>
+spec:
+    externalLabels:
+         cluster: IKS-NON-PROD-NA
